@@ -36,6 +36,7 @@ Nak³adka na rdzeñ klienta sieci eDonkey2000 lub sieci Overnet.
 
 %build
 rm -f missing
+cp -f /usr/share/automake/config.sub .
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
