@@ -1,12 +1,8 @@
-#
-# Conditional build:
-%bcond_without	core	# use it if you will have own edonkey2000 core
-#
 Summary:	eDonkey2000 P2P Network Client
 Summary(pl):	Klient sieci eDonkey2000
 Name:		ed2k-gtk-gui
 Version:	0.6.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
@@ -20,7 +16,6 @@ BuildRequires:	gnet-devel >= 2.0.0
 BuildRequires:	gtk+2-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	zlib-devel
-%{?with_core:Requires: eDonkey-core}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
