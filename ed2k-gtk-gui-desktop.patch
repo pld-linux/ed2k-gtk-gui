@@ -1,0 +1,20 @@
+--- ed2k-gtk-gui-0.6.3/ed2k_gui.desktop.in~	Thu Nov 11 02:39:57 2004
++++ ed2k-gtk-gui-0.6.3/ed2k_gui.desktop.in	Thu Nov 11 02:39:57 2004
+@@ -24,7 +24,7 @@
+ Name[ss]=eDonkey2000 GTK+ Silawuli lesiyinhloko
+ Name[sv]=eDonkey2000 GTK+ och kärnhantering
+ Name[tr]=eDonkey2000 GTK+ Denetleyici
+-Name[ven]=eDonngi2000 GTK+ Tshilanguli tshihulwane
++Name[ve]=eDonngi2000 GTK+ Tshilanguli tshihulwane
+ Name[xh]=eDonkey2000 GTK+ Nomlawuli Wangaphakathi
+ Name[zh_CN]=eDonkey2000 GTK+ 核心控制器
+ Name[zh_TW]=eDonkey2000 GTK+ 核心控制器
+@@ -51,7 +51,7 @@
+ GenericName[ta]=þ-¸Ø¨¾2000
+ GenericName[tr]=eDonkey2000 Grafik Arayüzü
+ GenericName[uk]=Інтерфейс для eDonkey2000
+-GenericName[ven]=eDonngi2000 GUI
++GenericName[ve]=eDonngi2000 GUI
+ GenericName[zu]=I-GUI ye-eDonkey2000
+ Terminal=false
+ Type=Application
