@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_core - use it if you will have own edonkey2000 core
+%bcond_without	core	# use it if you will have own edonkey2000 core
 #
 Summary:	eDonkey2000 P2P Network Client
 Summary(pl):	Klient sieci eDonkey2000
@@ -20,7 +20,7 @@ BuildRequires:	gnet-devel >= 2.0.0
 BuildRequires:	gtk+2-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	zlib-devel
-%{!?_without_core:Requires: eDonkey-core}
+%{?with_core:Requires: eDonkey-core}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
