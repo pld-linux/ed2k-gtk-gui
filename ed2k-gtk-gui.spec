@@ -1,6 +1,6 @@
 %define		ed2k_rel	1
-Summary:	Gnutella P2P Network Client
-Summary(pl):	Klient sieci Gnutella
+Summary:	eDonkey2000 P2P Network Client
+Summary(pl):	Klient sieci eDonkey2000
 Name:		ed2k-gtk-gui
 Version:	0.4.0
 Release:	1
@@ -18,10 +18,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_docdir		/usr/X11R6/share
 
 %description
-Gnutella P2P Network Client.
+eDonkey2000 P2P Network Client.
 
 %description -l pl
-Klient sieci Gnutella.
+Klient sieci eDonkey2000.
 
 %prep
 %setup -q -n ed2k_gui-%{version}
