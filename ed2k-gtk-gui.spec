@@ -1,6 +1,5 @@
 #
-# conditional build:
-#
+# Conditional build:
 # _without_core - use it if you will have own edonkey2000 core
 #
 %define		ed2k_rel	1
@@ -13,10 +12,10 @@ License:	GPL
 Group:		Applications/Communications
 Source0:	http://download.sourceforge.net/%{name}/%{name}_%{version}-%{ed2k_rel}.tar.gz
 URL:		http://ed2k-gtk-gui.sourceforge.net/
+BuildRequires:	gnet-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	zlib-devel
-BuildRequires:	gnet-devel
 %{!?_without_core:Requires: eDonkey-core}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,7 +26,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 GTK+ GUI for eDonkey2000 core client.
 
 %description -l pl
-Nak³adka na rdzeñ clienta sieci eDonkey2000.
+Nak³adka na rdzeñ klienta sieci eDonkey2000.
 
 %prep
 %setup -q -n ed2k_gui-%{version}
