@@ -10,7 +10,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	4e4644a77d97e88a9e474efef52fbd8b
+# Source0-md5:	79555c734f0e3eb3b5818da786132d80
 Patch0:		%{name}-home_etc.patch
 Patch1:		%{name}-enable-deprecated.patch
 URL:		http://ed2k-gtk-gui.sourceforge.net/
