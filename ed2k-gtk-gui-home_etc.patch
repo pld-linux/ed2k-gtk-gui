@@ -1,7 +1,21 @@
-diff -Nru ed2k-gtk-gui-0.6.1.orig/ed2k_gui/options.c ed2k-gtk-gui-0.6.1/ed2k_gui/options.c
---- ed2k-gtk-gui-0.6.1.orig/ed2k_gui/options.c	2003-11-13 19:53:28.000000000 +0100
-+++ ed2k-gtk-gui-0.6.1/ed2k_gui/options.c	2003-11-22 18:51:27.000000000 +0100
-@@ -830,11 +830,11 @@
+diff -urN ed2k-gtk-gui-0.6.3.orig/ed2k_gui/icons.c ed2k-gtk-gui-0.6.3/ed2k_gui/icons.c
+--- ed2k-gtk-gui-0.6.3.orig/ed2k_gui/icons.c	2004-01-16 22:24:19.000000000 +0100
++++ ed2k-gtk-gui-0.6.3/ed2k_gui/icons.c	2004-09-28 22:39:34.974793016 +0200
+@@ -53,7 +53,9 @@
+ 	gchar          *hdiconpath;
+ 	GDir           *dir;
+ 
+-	homedir = g_getenv ("HOME");
++	homedir = g_getenv ("HOME_ETC");
++	if (!homedir) homedir = g_getenv("HOME");
++	
+ 
+ 	if (opt_get_str(OPT_GUI_ICON_THEME))
+ 		themes = g_slist_append (themes, g_strdup(opt_get_str(OPT_GUI_ICON_THEME)));
+diff -urN ed2k-gtk-gui-0.6.3.orig/ed2k_gui/options.c ed2k-gtk-gui-0.6.3/ed2k_gui/options.c
+--- ed2k-gtk-gui-0.6.3.orig/ed2k_gui/options.c	2004-08-09 15:53:05.000000000 +0200
++++ ed2k-gtk-gui-0.6.3/ed2k_gui/options.c	2004-09-28 22:38:21.783919720 +0200
+@@ -889,11 +889,11 @@
  static void
  opt_init_prefpath (void)
  {
@@ -12,18 +26,6 @@ diff -Nru ed2k-gtk-gui-0.6.1.orig/ed2k_gui/options.c ed2k-gtk-gui-0.6.1/ed2k_gui
  
 -	homedir = g_get_home_dir();
 +	if (!homedir) homedir = g_get_home_dir();
- 	g_return_if_fail (homedir != NULL );
  
- 	/* using wine + cross-compiled win32 binary, we
---- ed2k-gtk-gui-0.6.1.orig/ed2k_gui/icons.c	2003-11-13 19:53:27.000000000 +0100
-+++ ed2k-gtk-gui-0.6.1/ed2k_gui/icons.c	2003-11-26 13:29:07.000000000 +0100
-@@ -53,7 +53,8 @@
- 	gchar          *hdiconpath;
- 	GDir           *dir;
- 
--	homedir = g_getenv ("HOME");
-+	homedir = g_getenv ("HOME_ETC");
-+	if (!homedir) homedir = g_getenv("HOME");
- 
- 	if (opt_get_str(OPT_GUI_ICON_THEME))
- 		themes = g_slist_append (themes, g_strdup(opt_get_str(OPT_GUI_ICON_THEME)));
+ #ifdef G_OS_WIN32
+ 	/*  win98: g_get_home_dir() returns NULL
