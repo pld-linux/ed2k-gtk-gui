@@ -2,13 +2,14 @@ Summary:	eDonkey2000 P2P Network Client
 Summary(pl):	Klient sieci eDonkey2000
 Name:		ed2k-gtk-gui
 Version:	0.6.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	191581cf44cd334a9d56aff2c68f4806
 Patch0:		%{name}-home_etc.patch
 Patch1:		%{name}-enable-deprecated.patch
+Patch2:		%{name}-desktop.patch
 URL:		http://ed2k-gtk-gui.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -28,6 +29,7 @@ Nak³adka na rdzeñ klienta sieci eDonkey2000 lub sieci Overnet.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 rm -f missing
