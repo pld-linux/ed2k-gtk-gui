@@ -19,7 +19,6 @@ BuildRequires:	zlib-devel
 %{!?_without_core:Requires: eDonkey-core}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _prefix         /usr/X11R6
 %define		_docdir		/usr/X11R6/share
 
 %description
