@@ -5,33 +5,38 @@
 Summary:	eDonkey2000 P2P Network Client
 Summary(pl):	Klient sieci eDonkey2000
 Name:		ed2k-gtk-gui
-Version:	0.5.0
-Release:	4
+Version:	0.6.0
+Release:	1
 License:	GPL
 Group:		Applications/Communications
-Source0:	http://dl.sourceforge.net/%{name}/%{name}_%{version}.tar.gz
-# Source0-md5:	c71d47f9d591624d468758dde2463e46
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	035b0a3973ec049e18bb298aa2456c21
 URL:		http://ed2k-gtk-gui.sourceforge.net/
-BuildRequires:	gnet-devel < 1.2.0
-BuildRequires:	gtk+-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	gnet-devel >= 2.0.0
+BuildRequires:	gtk+2-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	zlib-devel
 %{!?_without_core:Requires: eDonkey-core}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_docdir		/usr/X11R6/share
-
 %description
 GTK+ GUI for eDonkey2000 or overnet core client.
 
 %description -l pl
-Nak³adka na rdzeñ klienta sieci eDonkey2000 lub sieci overnet.
+Nak³adka na rdzeñ klienta sieci eDonkey2000 lub sieci Overnet.
 
 %prep
-%setup -q -n ed2k-gtk-gui_%{version}
+%setup -q
 
 %build
-%configure2_13
+rm -f missing
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
+%configure
 %{__make}
 
 %install
@@ -40,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f ed2k_gui/docs/en/Makefile*
+rm -f docs/{de,en,es}/Makefile*
 
 %find_lang ed2k_gui
 
@@ -58,6 +63,10 @@ echo ""
 
 %files -f ed2k_gui.lang
 %defattr(644,root,root,755)
-%doc README ChangeLog BUGS AUTHORS ed2k_gui/docs/en/
+%doc README ChangeLog TODO AUTHORS docs/en
+%lang(de) %doc docs/de
+%lang(es) %doc docs/es
+%{_mandir}/man1/*
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/ed2k_gui
+%{_desktopdir}/*
