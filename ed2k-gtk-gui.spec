@@ -13,9 +13,11 @@ Patch2:		%{name}-desktop.patch
 URL:		http://ed2k-gtk-gui.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	gnet-devel >= 2.0.0
 BuildRequires:	gtk+2-devel
 BuildRequires:	libxml2-devel
+BuildRequires:	pkgconfig
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
