@@ -21,10 +21,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_docdir		/usr/X11R6/share
 
 %description
-GTK+ GUI for eDonkey2000 core client.
+GTK+ GUI for eDonkey2000 or overnet core client.
 
 %description -l pl
-Nak³adka na rdzeñ klienta sieci eDonkey2000.
+Nak³adka na rdzeñ klienta sieci eDonkey2000 lub sieci overnet.
 
 %prep
 %setup -q -n ed2k-gtk-gui_%{version}
