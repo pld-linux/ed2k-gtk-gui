@@ -6,7 +6,7 @@ Summary:	eDonkey2000 P2P Network Client
 Summary(pl):	Klient sieci eDonkey2000
 Name:		ed2k-gtk-gui
 Version:	0.5.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://download.sourceforge.net/%{name}/%{name}_%{version}.tar.gz
@@ -47,6 +47,9 @@ rm -rf $RPM_BUILD_ROOT
 echo""
 echo "Please type edonkey-conf, when you'll be logged as user"
 echo "It will prepare your donkey to use with ed2k :)"
+echo ""
+echo "You may also type overnet-conf, it will prepare overnet-core"
+echo "to use with ed2k, more info at http://www.overnet.com/"
 echo ""
 
 %files -f ed2k_gui.lang
