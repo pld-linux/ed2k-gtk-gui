@@ -49,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f docs/{de,en,es}/Makefile*
+rm -f docs/{de,en,es,pl}/Makefile*
 
 %find_lang ed2k_gui
 
@@ -70,6 +70,7 @@ echo ""
 %doc README ChangeLog TODO AUTHORS docs/en
 %lang(de) %doc docs/de
 %lang(es) %doc docs/es
+%lang(pl) %doc docs/pl
 %{_mandir}/man1/*
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/ed2k_gui
