@@ -37,8 +37,11 @@ Nak³adka na rdzeñ klienta sieci eDonkey2000 lub sieci overnet.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
 rm -f ed2k_gui/docs/en/Makefile*
+
 %find_lang ed2k_gui
 
 %clean
