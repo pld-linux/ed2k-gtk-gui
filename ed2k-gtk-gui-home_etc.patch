@@ -1,0 +1,29 @@
+diff -Nru ed2k-gtk-gui-0.6.1.orig/ed2k_gui/options.c ed2k-gtk-gui-0.6.1/ed2k_gui/options.c
+--- ed2k-gtk-gui-0.6.1.orig/ed2k_gui/options.c	2003-11-13 19:53:28.000000000 +0100
++++ ed2k-gtk-gui-0.6.1/ed2k_gui/options.c	2003-11-22 18:51:27.000000000 +0100
+@@ -830,11 +830,11 @@
+ static void
+ opt_init_prefpath (void)
+ {
+-	const gchar *homedir;
++	const gchar *homedir = getenv("HOME_ETC");
+ 
+ 	G_FREE(prefpath);
+ 
+-	homedir = g_get_home_dir();
++	if (!homedir) homedir = g_get_home_dir();
+ 	g_return_if_fail (homedir != NULL );
+ 
+ 	/* using wine + cross-compiled win32 binary, we
+--- ed2k-gtk-gui-0.6.1.orig/ed2k_gui/icons.c	2003-11-13 19:53:27.000000000 +0100
++++ ed2k-gtk-gui-0.6.1/ed2k_gui/icons.c	2003-11-26 13:29:07.000000000 +0100
+@@ -53,7 +53,8 @@
+ 	gchar          *hdiconpath;
+ 	GDir           *dir;
+ 
+-	homedir = g_getenv ("HOME");
++	homedir = g_getenv ("HOME_ETC");
++	if (!homedir) homedir = g_getenv("HOME");
+ 
+ 	if (opt_get_str(OPT_GUI_ICON_THEME))
+ 		themes = g_slist_append (themes, g_strdup(opt_get_str(OPT_GUI_ICON_THEME)));
