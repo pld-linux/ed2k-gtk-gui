@@ -10,6 +10,7 @@ Release:	4
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://download.sourceforge.net/%{name}/%{name}_%{version}.tar.gz
+# Source0-md5:	c71d47f9d591624d468758dde2463e46
 URL:		http://ed2k-gtk-gui.sourceforge.net/
 BuildRequires:	gnet-devel < 1.2.0
 BuildRequires:	gtk+-devel
