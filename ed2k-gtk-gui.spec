@@ -24,10 +24,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_docdir		/usr/X11R6/share
 
 %description
-eDonkey2000 P2P Network Client.
+GTK+ GUI for eDonkey2000 core client.
 
 %description -l pl
-Klient sieci eDonkey2000.
+Nak³adka na rdzeñ clienta sieci eDonkey2000.
 
 %prep
 %setup -q -n ed2k_gui-%{version}
