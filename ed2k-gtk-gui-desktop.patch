@@ -9,7 +9,7 @@
  Name[xh]=eDonkey2000 GTK+ Nomlawuli Wangaphakathi
  Name[zh_CN]=eDonkey2000 GTK+ 核心控制器
  Name[zh_TW]=eDonkey2000 GTK+ 核心控制器
-@@ -51,7 +51,7 @@
+@@ -51,9 +51,9 @@
  GenericName[ta]=þ-¸Ø¨¾2000
  GenericName[tr]=eDonkey2000 Grafik Arayüzü
  GenericName[uk]=Інтерфейс для eDonkey2000
@@ -18,3 +18,6 @@
  GenericName[zu]=I-GUI ye-eDonkey2000
  Terminal=false
  Type=Application
+ Icon=@prefix@/share/@PACKAGE@/icons/gnome2/nuke.png
+-Categories=Gtk;Application;Network;P2P;
++Categories=GTK;Network;P2P;
