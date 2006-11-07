@@ -65,4 +65,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/*
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/ed2k_gui
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
