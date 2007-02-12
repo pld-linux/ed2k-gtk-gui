@@ -1,5 +1,5 @@
 Summary:	eDonkey2000 P2P Network Client
-Summary(pl):	Klient sieci eDonkey2000
+Summary(pl.UTF-8):   Klient sieci eDonkey2000
 Name:		ed2k-gtk-gui
 Version:	0.6.4
 Release:	1
@@ -24,8 +24,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 GTK+ GUI for eDonkey2000 or overnet core client.
 
-%description -l pl
-Nak≥adka na rdzeÒ klienta sieci eDonkey2000 lub sieci Overnet.
+%description -l pl.UTF-8
+Nak≈Çadka na rdze≈Ñ klienta sieci eDonkey2000 lub sieci Overnet.
 
 %prep
 %setup -q
