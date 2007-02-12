@@ -1,5 +1,5 @@
 Summary:	eDonkey2000 P2P Network Client
-Summary(pl.UTF-8):   Klient sieci eDonkey2000
+Summary(pl.UTF-8):	Klient sieci eDonkey2000
 Name:		ed2k-gtk-gui
 Version:	0.6.4
 Release:	1
